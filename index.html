@@ -85,13 +85,6 @@ nav { position:fixed; top:0; left:0; right:0; z-index:100; padding:1.1rem 3rem; 
 .four .wf-node.hot { background:rgba(242,140,107,0.15); color:var(--rose); border-color:rgba(242,140,107,0.3); }
 .wf-node.out { font-family:'Sora',sans-serif; font-weight:600; font-size:0.84rem; padding:9px 16px; border-radius:9px; background:rgba(245,244,240,0.09); color:rgba(245,244,240,0.85); white-space:nowrap; }
 
-.build-list{list-style:none; display:flex; flex-direction:column; gap:0.6rem; margin-bottom:2rem; max-width:640px;}
-.build-list li{position:relative; padding-left:1.6rem; color:rgba(245,244,240,0.72); font-size:0.92rem; line-height:1.6;}
-.build-list li::before{content:'✓'; position:absolute; left:0; top:0; font-size:0.8rem;}
-.one .build-list li::before{color:var(--accent);}
-.two .build-list li::before{color:var(--purple);}
-.three .build-list li::before{color:var(--gold);}
-.four .build-list li::before{color:var(--rose);}
 
 /* OUTLOOK MOCKUP (case 1 only) */
 .outlook-window { background:#1d1f24; border:1px solid rgba(255,255,255,0.08); border-radius:14px; overflow:hidden; margin-bottom:2.5rem; box-shadow:0 20px 50px -20px rgba(0,0,0,0.5); }
@@ -156,21 +149,6 @@ nav { position:fixed; top:0; left:0; right:0; z-index:100; padding:1.1rem 3rem; 
 .my-role-detail { font-size:0.74rem; color:var(--ink3); line-height:1.5; }
 
 /* DIAGNOSIS BLOCK */
-.diagnosis-block { border:1px solid var(--border2); border-radius:12px; overflow:hidden; margin-bottom:2.5rem; }
-.diag-row { display:grid; grid-template-columns:220px 1fr; border-bottom:1px solid var(--border); position:relative; }
-.diag-row:last-child { border-bottom:none; }
-.diag-row::before { content:''; position:absolute; left:0; top:0; bottom:0; width:3px; background:rgba(245,244,240,0.12); }
-.diag-row.diag-no-row::before { background:#e05a4a; }
-.diag-row.diag-yes-row::before { background:var(--accent); }
-.diag-row.diag-conclusion::before { background:var(--purple); }
-.diag-q { font-weight:600; font-size:0.82rem; color:var(--ink2); padding:1.1rem 1.2rem 1.1rem 1.4rem; border-right:1px solid var(--border); background:rgba(245,244,240,0.03); display:flex; align-items:center; }
-.diag-a { font-size:0.84rem; color:rgba(245,244,240,0.75); padding:1.1rem 1.4rem; line-height:1.7; display:flex; align-items:center; }
-.diag-no-row .diag-q { color:var(--ink3); }
-.diag-no-row .diag-a { color:rgba(245,244,240,0.5); }
-.diag-yes-row .diag-q { color:var(--accent); background:rgba(74,222,155,0.05); }
-.diag-yes-row .diag-a { color:rgba(245,244,240,0.88); background:rgba(74,222,155,0.04); }
-.diag-conclusion .diag-q { color:var(--ink); background:rgba(167,139,250,0.07); font-weight:700; }
-.diag-conclusion .diag-a { color:var(--ink2); background:rgba(167,139,250,0.04); align-items:flex-start; }
 
 /* CASE 2 style — real app mockups */
 .sources-grid { display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-bottom:1.75rem; }
@@ -227,9 +205,6 @@ nav { position:fixed; top:0; left:0; right:0; z-index:100; padding:1.1rem 3rem; 
 .four .brief-doc-num { color:var(--rose); }
 
 /* STATUS BADGE */
-.status-badge{ display:inline-flex; align-items:center; gap:0.4rem; font-family:'Space Mono',monospace; font-size:0.6rem; letter-spacing:0.06em; text-transform:uppercase; color:var(--rose); border:1px solid rgba(242,140,107,0.35); padding:0.2rem 0.6rem; border-radius:100px; }
-.status-badge::before{content:''; width:5px; height:5px; border-radius:50%; background:var(--rose); animation:pulse 1.6s ease-in-out infinite;}
-@keyframes pulse{0%,100%{opacity:1;} 50%{opacity:0.35;}}
 
 /* OVERVIEW / CAPABILITY SECTION */
 .cap-title { font-family:'Sora',sans-serif; font-weight:600; font-size:1.15rem; letter-spacing:-0.01em; color:var(--ink2); max-width:900px; margin-bottom:1.8rem; }
@@ -257,17 +232,7 @@ nav { position:fixed; top:0; left:0; right:0; z-index:100; padding:1.1rem 3rem; 
 
 /* JUMP LINK ROW */
 .cap-jump-lbl { font-weight:600; font-size:0.8rem; color:var(--ink3); margin-bottom:1.1rem; }
-.cap-jump-row { display:grid; grid-template-columns:repeat(4,1fr); gap:0.6rem; }
-.cap-jump-link { display:flex; align-items:center; justify-content:center; text-align:center; gap:6px; font-weight:600; font-size:0.74rem; padding:10px 10px; border-radius:99px; text-decoration:none; border:1px solid; transition:transform 0.2s, box-shadow 0.2s; line-height:1.3; }
 .jump-num { font-family:'Space Mono',monospace; font-size:0.66rem; opacity:0.6; margin-right:2px; }
-.cap-jump-link.one { color:var(--accent); border-color:rgba(74,222,155,0.35); background:rgba(74,222,155,0.08); }
-.cap-jump-link.one:hover { transform:translateY(-2px); box-shadow:0 8px 20px -8px rgba(74,222,155,0.4); }
-.cap-jump-link.two { color:var(--purple); border-color:rgba(167,139,250,0.35); background:rgba(167,139,250,0.08); }
-.cap-jump-link.two:hover { transform:translateY(-2px); box-shadow:0 8px 20px -8px rgba(167,139,250,0.4); }
-.cap-jump-link.three { color:var(--gold); border-color:rgba(242,200,121,0.35); background:rgba(242,200,121,0.08); }
-.cap-jump-link.three:hover { transform:translateY(-2px); box-shadow:0 8px 20px -8px rgba(242,200,121,0.4); }
-.cap-jump-link.four { color:var(--rose); border-color:rgba(242,140,107,0.35); background:rgba(242,140,107,0.08); }
-.cap-jump-link.four:hover { transform:translateY(-2px); box-shadow:0 8px 20px -8px rgba(242,140,107,0.4); }
 
 /* QUESTIONS IT ANSWERS */
 /* ANSWER BLOCK (label + answer) */
@@ -312,7 +277,7 @@ nav { position:fixed; top:0; left:0; right:0; z-index:100; padding:1.1rem 3rem; 
 .brief-fact::before { content:'·'; color:var(--ink3); flex-shrink:0; }
 .brief-note { margin-top:9px; padding:8px 11px; background:rgba(242,200,121,0.07); border-left:2px solid var(--gold); border-radius:0; font-size:0.82rem; color:rgba(245,244,240,0.75); line-height:1.55; }
 .brief-note b { color:var(--gold); font-weight:600; margin-right:5px; }
-@media(max-width:768px){ .rec-foot{grid-template-columns:1fr} .cap-jump-row{grid-template-columns:1fr} }
+@media(max-width:768px){ .rec-foot{grid-template-columns:1fr} }
 
 footer { padding:4rem 3rem 3rem; border-top:1px solid var(--border); display:flex; flex-direction:column; align-items:center; gap:1.25rem; text-align:center; }
 .contact-line { font-weight:600; font-size:1.3rem; color:var(--ink); max-width:480px; line-height:1.4; }
@@ -326,7 +291,6 @@ footer { padding:4rem 3rem 3rem; border-top:1px solid var(--border); display:fle
   .hero{padding:7rem 1.25rem 2rem}
   .stage{padding:3rem 1.25rem}
   .problem-grid, .sources-grid, .cap-grid{grid-template-columns:1fr}
-  .diag-row{grid-template-columns:1fr} .diag-q{border-right:none; border-bottom:1px solid var(--border); padding-bottom:0.5rem}
   .my-role-grid{grid-template-columns:1fr}
   .ow-split{grid-template-columns:1fr} .ow-inbox{display:none}
   .time-row{grid-template-columns:80px 1fr; grid-template-rows:auto auto}
@@ -372,7 +336,7 @@ footer { padding:4rem 3rem 3rem; border-top:1px solid var(--border); display:fle
       <div class="cap-card three">
         <div class="cap-cat"><span class="jump-num">02</span>Client Intelligence Agent</div>
         <div class="cap-stat">71%</div>
-        <div class="cap-desc">faster client prep, 75% faster onboarding</div>
+        <div class="cap-desc">faster client prep, 55% faster onboarding</div>
         <div class="cap-arrow">Read the case study →</div>
       </div>
     </a>
@@ -451,10 +415,10 @@ footer { padding:4rem 3rem 3rem; border-top:1px solid var(--border); display:fle
   <div class="section-label reveal">My Role</div>
   <div class="my-role reveal">
     <div class="my-role-grid">
-      <div class="my-role-card"><span class="my-role-verb">Defined what counts as a signal</span><span class="my-role-detail">Worked out which delivery, relationship and contract signals were actually predictive versus noise</span></div>
-      <div class="my-role-card"><span class="my-role-verb">Designed the recommendation format</span><span class="my-role-detail">Every recommendation must show its evidence and confidence, or account managers won't trust it</span></div>
-      <div class="my-role-card"><span class="my-role-verb">Built on existing account context</span><span class="my-role-detail">Reused the client view from the Client Intelligence Agent rather than rebuilding the data layer</span></div>
-      <div class="my-role-card"><span class="my-role-verb">Closed the feedback loop</span><span class="my-role-detail">Captured which recommendations converted, so the system improves on real commercial outcomes</span></div>
+      <div class="my-role-card"><span class="my-role-verb">Sat with the top billers</span><span class="my-role-detail">Reverse-engineered how our strongest account managers decided who to call, then turned that instinct into rules</span></div>
+      <div class="my-role-card"><span class="my-role-verb">Killed the signals that didn't predict anything</span><span class="my-role-detail">Tested candidate signals against accounts that had actually expanded — most were noise, a handful weren't</span></div>
+      <div class="my-role-card"><span class="my-role-verb">Made every recommendation show its evidence</span><span class="my-role-detail">Account managers ignore a score they can't argue with. So nothing ships without a why-now and a source</span></div>
+      <div class="my-role-card"><span class="my-role-verb">Scored recommendations against what closed</span><span class="my-role-detail">Tracked which ones converted, so the system tunes on won deals, not on how confident it sounded</span></div>
     </div>
   </div>
   <div class="tool-row reveal">
@@ -468,13 +432,12 @@ footer { padding:4rem 3rem 3rem; border-top:1px solid var(--border); display:fle
 <div class="full-divider"></div>
 <div class="stage-wrap three" id="case-02">
 <div class="stage">
-  <div class="case-stage-tag">Case Study 02 · Client Intelligence Agent — Knowledge Management</div>
+  <div class="case-stage-tag">Case Study 02 · Client Intelligence Agent — Account Management</div>
   <h2 class="case-name">Two years of client history, delivered as a <span class="case-name-num">four-minute briefing</span> before every meeting.</h2>
   <p class="case-tagline">When an engagement manager left, the account cooled — not because demand disappeared, but because everything they knew went with them. This keeps it.</p>
   <div class="stat-strip reveal">
     <div class="stat-item"><div class="stat-num">71%</div><div class="stat-lbl">faster client prep</div></div>
-    <div class="stat-item"><div class="stat-num">91%</div><div class="stat-lbl">CRM knowledge capture</div></div>
-    <div class="stat-item"><div class="stat-num">43%</div><div class="stat-lbl">cross-service opportunity ID</div></div>
+    <div class="stat-item"><div class="stat-num">55%</div><div class="stat-lbl">faster new AM ramp-up</div></div>
   </div>
 
   <div class="section-label reveal">Business context</div>
@@ -522,21 +485,21 @@ footer { padding:4rem 3rem 3rem; border-top:1px solid var(--border); display:fle
       <div class="brief-note"><b>Suggestion:</b> the objection was timing, not fit. Re-pitch now.</div>
     </div>
   </div>
-  <p class="body-text reveal">The point isn't the summary. It's that the awkward things — the late phase, the sponsor who left, the gap nobody chased — surface <em>before</em> the meeting, not during it.</p>
+  <p class="body-text reveal">Now, account managers walked into meetings with the full context — and followed up with data-backed confidence.</p>
 
   <div class="section-label reveal">Business impact</div>
   <p class="body-text reveal">Prep stopped depending on whoever happened to remember the account. Observations that used to disappear the moment someone changed projects got captured instead, and new account managers stopped spending their first month reconstructing history.</p>
   <div class="impact-row reveal">
     <div class="impact-cell"><div class="impact-num">71%</div><div class="impact-desc">REDUCTION IN EXECUTIVE CLIENT PREP TIME</div></div>
-    <div class="impact-cell"><div class="impact-num">91%</div><div class="impact-desc">INCREASE IN CRM KNOWLEDGE CAPTURE</div></div>
-    <div class="impact-cell"><div class="impact-num">43%</div><div class="impact-desc">IMPROVEMENT IN CROSS-SERVICE OPPORTUNITY ID</div></div>
+    <div class="impact-cell"><div class="impact-num">55%</div><div class="impact-desc">REDUCTION IN NEW ACCOUNT MANAGER RAMP TIME</div></div>
   </div>
   <div class="section-label reveal">My Role</div>
   <div class="my-role reveal">
     <div class="my-role-grid">
-      <div class="my-role-card"><span class="my-role-verb">Diagnosed the knowledge gap</span><span class="my-role-detail">Traced dips in account activity back to consultant turnover, not lost demand</span></div>
-      <div class="my-role-card"><span class="my-role-verb">Defined what belongs in a brief</span><span class="my-role-detail">Decided which details were worth surfacing — including the uncomfortable ones people avoid logging</span></div>
-      <div class="my-role-card"><span class="my-role-verb">Drove firm-wide adoption</span><span class="my-role-detail">Rolled out to Engagement Managers and Account Directors, pilot group validating quality first</span></div>
+      <div class="my-role-card"><span class="my-role-verb">Proved it was turnover, not demand</span><span class="my-role-detail">Traced cooling accounts back to who had left, and made the case that knowledge was the growth constraint</span></div>
+      <div class="my-role-card"><span class="my-role-verb">Researched what people needed before a meeting</span><span class="my-role-detail">Pulled the brief structure from what account managers actually scrambled for ahead of a client conversation</span></div>
+      <div class="my-role-card"><span class="my-role-verb">Put the key facts in the brief</span><span class="my-role-detail">The late phase, the sponsor who left, the gap nobody chased — the details that decide how a meeting goes</span></div>
+      <div class="my-role-card"><span class="my-role-verb">Pulled three systems into one view</span><span class="my-role-detail">CRM records, delivery documentation and meeting notes, updating continuously instead of on request</span></div>
     </div>
   </div>
   <div class="tool-row reveal">
@@ -652,12 +615,10 @@ footer { padding:4rem 3rem 3rem; border-top:1px solid var(--border); display:fle
   <div class="section-label reveal">My Role</div>
   <div class="my-role reveal">
     <div class="my-role-grid">
-      <div class="my-role-card"><span class="my-role-verb">Diagnosed workflows</span><span class="my-role-detail">Mapped reporting inefficiencies across leadership</span></div>
-      <div class="my-role-card"><span class="my-role-verb">Gathered requirements</span><span class="my-role-detail">Stakeholder sessions across delivery, sales and leadership</span></div>
-      <div class="my-role-card"><span class="my-role-verb">Designed the weekly brief</span><span class="my-role-detail">Decided what leadership needed to see, and what was noise</span></div>
-      <div class="my-role-card"><span class="my-role-verb">Acted on what it found</span><span class="my-role-detail">Ran the profitability analysis and made the case for repricing</span></div>
-      <div class="my-role-card"><span class="my-role-verb">Led rollout</span><span class="my-role-detail">Trained leadership on interpreting and acting on outputs</span></div>
-      <div class="my-role-card"><span class="my-role-verb">Iterated solution</span><span class="my-role-detail">Refined briefing structure based on adoption data</span></div>
+      <div class="my-role-card"><span class="my-role-verb">Found the signal nobody was reading</span><span class="my-role-detail">Noticed the same client request surfacing in Slack months before it ever hit a margin report</span></div>
+      <div class="my-role-card"><span class="my-role-verb">Cut the brief to three points</span><span class="my-role-detail">Focused leadership on what they needed to decide that week, and dropped everything that wasn't actionable</span></div>
+      <div class="my-role-card"><span class="my-role-verb">Ran the profitability analysis</span><span class="my-role-detail">Took the demand signal and proved the service line was underpriced at a 16% margin against a 45% target</span></div>
+      <div class="my-role-card"><span class="my-role-verb">Made the case for repricing</span><span class="my-role-detail">Raised it to leadership and drove a 30% client rate increase off the back of it</span></div>
     </div>
   </div>
   <div class="tool-row reveal">
@@ -764,12 +725,10 @@ footer { padding:4rem 3rem 3rem; border-top:1px solid var(--border); display:fle
   <div class="section-label reveal">My Role</div>
   <div class="my-role reveal">
     <div class="my-role-grid">
-      <div class="my-role-card"><span class="my-role-verb">Diagnosed workflows</span><span class="my-role-detail">Mapped the billing query workflow and identified investigation time as the bottleneck</span></div>
-      <div class="my-role-card"><span class="my-role-verb">Gathered requirements</span><span class="my-role-detail">Sessions with delivery managers and consultants across 3 key accounts</span></div>
-      <div class="my-role-card"><span class="my-role-verb">Designed the workflow</span><span class="my-role-detail">Retrieval across prepaid tracker, SOW and email history, with conflicts flagged</span></div>
-      <div class="my-role-card"><span class="my-role-verb">Partnered with developers</span><span class="my-role-detail">Built and integrated the Power Automate and Copilot pipeline</span></div>
-      <div class="my-role-card"><span class="my-role-verb">Led rollout</span><span class="my-role-detail">Trained delivery teams on reviewing AI-generated drafts</span></div>
-      <div class="my-role-card"><span class="my-role-verb">Established AI governance</span><span class="my-role-detail">Defined prompt guidelines, approval workflows and restrictions on confidential client data</span></div>
+      <div class="my-role-card"><span class="my-role-verb">Proved the delay was the risk</span><span class="my-role-detail">Timed the workflow across 3 key accounts and showed the cost was investigation, not writing</span></div>
+      <div class="my-role-card"><span class="my-role-verb">Made it check three sources, not one</span><span class="my-role-detail">Prepaid tracker, signed SOW and email history — and flag it when they disagreed, rather than pick one</span></div>
+      <div class="my-role-card"><span class="my-role-verb">Ensured human review before anything sent</span><span class="my-role-detail">Every draft cites its sources and waits for approval, so speed never came at the cost of accuracy</span></div>
+      <div class="my-role-card"><span class="my-role-verb">Freed consultants from the PM queue</span><span class="my-role-detail">Put the answer in their hands directly, instead of making them wait on someone else to dig it out</span></div>
     </div>
   </div>
   <div class="tool-row reveal">
