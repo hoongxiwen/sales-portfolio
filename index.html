@@ -210,29 +210,25 @@ nav { position:fixed; top:0; left:0; right:0; z-index:100; padding:1.1rem 3rem; 
 .cap-title { font-family:'Sora',sans-serif; font-weight:600; font-size:1.15rem; letter-spacing:-0.01em; color:var(--ink2); max-width:900px; margin-bottom:1.8rem; }
 .cap-sub { font-size:0.95rem; color:var(--ink2); max-width:640px; line-height:1.75; margin-bottom:2.6rem; }
 .cap-grid { display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-bottom:2.6rem; }
-.cap-card { background:var(--bg4); border:1px solid var(--border2); border-radius:14px; padding:1.6rem 1.7rem; border-left:3px solid transparent; }
-.cap-card.one { border-left-color:var(--accent); }
-.cap-card.two { border-left-color:var(--purple); }
-.cap-card.three { border-left-color:var(--gold); }
-.cap-card.four { border-left-color:var(--rose); }
-.cap-cat { font-family:'Space Mono',monospace; font-weight:600; font-size:0.64rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--ink3); display:flex; align-items:center; gap:0.5rem; }
-.cap-stat { font-family:'Sora',sans-serif; font-weight:700; font-size:2rem; letter-spacing:-0.02em; margin-top:0.55rem; }
-.cap-card.one .cap-stat { color:var(--accent); }
-.cap-card.two .cap-stat { color:var(--purple); }
-.cap-card.three .cap-stat { color:var(--gold); }
-.cap-card.four .cap-stat { color:var(--rose); }
-.cap-desc { font-size:0.85rem; color:var(--ink2); margin-top:0.3rem; }
+.cap-card { background:var(--bg4); border:1px solid var(--border2); border-radius:14px; padding:1.4rem 1.5rem; }
+.cap-card-top { display:flex; justify-content:space-between; align-items:center; gap:1rem; margin-bottom:0.5rem; }
+.cap-name { font-family:'Sora',sans-serif; font-weight:600; font-size:1rem; color:var(--ink); letter-spacing:-0.01em; }
+.cap-stat { font-family:'Sora',sans-serif; font-weight:600; font-size:0.7rem; padding:3px 10px; border-radius:99px; white-space:nowrap; flex-shrink:0; }
+.cap-card.one .cap-stat { color:var(--accent); background:rgba(74,222,155,0.12); border:1px solid rgba(74,222,155,0.3); }
+.cap-card.two .cap-stat { color:var(--purple); background:rgba(167,139,250,0.12); border:1px solid rgba(167,139,250,0.3); }
+.cap-card.three .cap-stat { color:var(--gold); background:rgba(242,200,121,0.12); border:1px solid rgba(242,200,121,0.3); }
+.cap-card.four .cap-stat { color:var(--rose); background:rgba(242,140,107,0.12); border:1px solid rgba(242,140,107,0.3); }
+.cap-desc { font-size:0.88rem; color:var(--ink2); line-height:1.5; }
+.cap-num { font-family:'Space Mono',monospace; font-size:0.62rem; letter-spacing:0.08em; color:var(--ink3); margin-bottom:0.7rem; }
 .cap-card-link { text-decoration:none; display:block; cursor:pointer; transition:transform 0.2s, box-shadow 0.2s, border-color 0.2s; }
 .cap-card-link:hover { transform:translateY(-3px); }
 .cap-card-link.one:hover .cap-card { border-color:rgba(74,222,155,0.4); box-shadow:0 12px 30px -14px rgba(74,222,155,0.35); }
 .cap-card-link.two:hover .cap-card { border-color:rgba(167,139,250,0.4); box-shadow:0 12px 30px -14px rgba(167,139,250,0.35); }
 .cap-card-link.three:hover .cap-card { border-color:rgba(242,200,121,0.4); box-shadow:0 12px 30px -14px rgba(242,200,121,0.35); }
 .cap-card-link.four:hover .cap-card { border-color:rgba(242,140,107,0.4); box-shadow:0 12px 30px -14px rgba(242,140,107,0.35); }
-.cap-arrow { font-size:0.8rem; color:var(--ink3); margin-top:0.6rem; }
 
 /* JUMP LINK ROW */
 .cap-jump-lbl { font-weight:600; font-size:0.8rem; color:var(--ink3); margin-bottom:1.1rem; }
-.jump-num { font-family:'Space Mono',monospace; font-size:0.66rem; opacity:0.6; margin-right:2px; }
 
 /* QUESTIONS IT ANSWERS */
 /* ANSWER BLOCK (label + answer) */
@@ -326,34 +322,42 @@ footer { padding:4rem 3rem 3rem; border-top:1px solid var(--border); display:fle
   <div class="cap-grid reveal">
     <a href="#case-01" class="cap-card-link four">
       <div class="cap-card four">
-        <div class="cap-cat"><span class="jump-num">01</span>Revenue Growth Agent</div>
-        <div class="cap-stat">36%</div>
-        <div class="cap-desc">gains in cross-sell, upsell and renewal retention</div>
-        <div class="cap-arrow">Read the case study →</div>
+        <div class="cap-num">01</div>
+        <div class="cap-card-top">
+          <div class="cap-name">Revenue Growth Agent</div>
+          <div class="cap-stat">36%</div>
+        </div>
+        <div class="cap-desc">Spots the next deal for you</div>
       </div>
     </a>
     <a href="#case-02" class="cap-card-link three">
       <div class="cap-card three">
-        <div class="cap-cat"><span class="jump-num">02</span>Client Intelligence Agent</div>
-        <div class="cap-stat">71%</div>
-        <div class="cap-desc">faster client prep, 55% faster onboarding</div>
-        <div class="cap-arrow">Read the case study →</div>
+        <div class="cap-num">02</div>
+        <div class="cap-card-top">
+          <div class="cap-name">Client Intelligence Agent</div>
+          <div class="cap-stat">71%</div>
+        </div>
+        <div class="cap-desc">Two years of context, in four minutes</div>
       </div>
     </a>
     <a href="#case-03" class="cap-card-link two">
       <div class="cap-card two">
-        <div class="cap-cat"><span class="jump-num">03</span>Commercial Intelligence Agent</div>
-        <div class="cap-stat">131%</div>
-        <div class="cap-desc">higher service margins</div>
-        <div class="cap-arrow">Read the case study →</div>
+        <div class="cap-num">03</div>
+        <div class="cap-card-top">
+          <div class="cap-name">Leadership Briefing Agent</div>
+          <div class="cap-stat">131%</div>
+        </div>
+        <div class="cap-desc">Sees demand before the dashboard does</div>
       </div>
     </a>
     <a href="#case-04" class="cap-card-link one">
       <div class="cap-card one">
-        <div class="cap-cat"><span class="jump-num">04</span>Client Response Agent</div>
-        <div class="cap-stat">90%</div>
-        <div class="cap-desc">faster client responses</div>
-        <div class="cap-arrow">Read the case study →</div>
+        <div class="cap-num">04</div>
+        <div class="cap-card-top">
+          <div class="cap-name">Client Response Agent</div>
+          <div class="cap-stat">90%</div>
+        </div>
+        <div class="cap-desc">Client questions, answered in minutes</div>
       </div>
     </a>
   </div>
@@ -377,7 +381,7 @@ footer { padding:4rem 3rem 3rem; border-top:1px solid var(--border); display:fle
   <p class="body-text reveal">The information needed to spot a growth opportunity already existed on every account — project updates, consultant comments, contract dates, stakeholder changes. It just wasn't anyone's job to watch all of it, on every account, every week.</p>
 
   <div class="section-label reveal">The problem</div>
-  <p class="body-text reveal">Expansion opportunities rarely showed up as a customer asking for more. They showed up as a pattern — a migration mentioned twice, a consultant flagging the same gap on two projects, a contract renewal six months out, a new CIO arriving. <strong>Account growth depended on whichever account manager happened to notice.</strong> Experienced ones spotted these patterns intuitively. Newer ones didn't, so cross-selling was inconsistent, renewals stayed reactive, and revenue growth was impossible to scale.</p>
+  <p class="body-text reveal">Expansion opportunities rarely showed up as a customer asking for more. They showed up as a pattern — a client hiring for a capability they don't have, a competitor's contract nearing expiry, an incident in their sector, findings from our own work left unremediated. <strong>Account growth depended on whichever account manager happened to notice.</strong> Experienced ones spotted these patterns intuitively. Newer ones didn't, so cross-selling was inconsistent, renewals stayed reactive, and revenue growth was impossible to scale.</p>
 
   <div class="section-label reveal">The fix</div>
   <p class="body-text reveal">A lead-scoring model ranks accounts by probability. It can't say <em>why now</em>, who to approach, or which past project to reference in the pitch. So rather than scoring accounts, I built something that does the reasoning an experienced account manager would — and hands over the result.</p>
@@ -389,19 +393,19 @@ footer { padding:4rem 3rem 3rem; border-top:1px solid var(--border); display:fle
       <div class="rec-conf">Confidence 89%</div>
     </div>
     <div class="rec-body">
-      <div class="rec-client">Global Bank (APAC) — existing account</div>
-      <div class="rec-service">Cloud Security Assessment · est. value USD 250K</div>
+      <div class="rec-client">Regional Insurer (SEA) — existing account</div>
+      <div class="rec-service">Managed Detection &amp; Response · est. value USD 180K</div>
       <div class="rec-why-lbl">Why now</div>
-      <div class="rec-evi"><span class="tick">✓</span><span>Azure migration announced publicly last month</span></div>
-      <div class="rec-evi"><span class="tick">✓</span><span>Our consultant flagged IAM gaps on their last engagement</span></div>
-      <div class="rec-evi"><span class="tick">✓</span><span>New CIO appointed — budget priorities being reset now</span></div>
-      <div class="rec-evi"><span class="tick">✓</span><span>Regulatory deadline in 4 months</span></div>
-      <div class="rec-evi"><span class="tick">✓</span><span>Their current project with us ends in 6 weeks</span></div>
+      <div class="rec-evi"><span class="tick">✓</span><span>Two ransomware incidents in their sector this quarter</span></div>
+      <div class="rec-evi"><span class="tick">✓</span><span>They hired a Head of Security Operations six weeks ago</span></div>
+      <div class="rec-evi"><span class="tick">✓</span><span>Our last pentest found gaps they haven't remediated</span></div>
+      <div class="rec-evi"><span class="tick">✓</span><span>Their MDR contract with an incumbent expires in 5 months</span></div>
+      <div class="rec-evi"><span class="tick">✓</span><span>Budget cycle opens next quarter</span></div>
     </div>
     <div class="rec-foot">
-      <div class="rec-cell"><div class="rec-cell-lbl">Who to approach</div><div class="rec-cell-val">Head of Infrastructure</div></div>
-      <div class="rec-cell"><div class="rec-cell-lbl">Recommended move</div><div class="rec-cell-val">Invite to executive workshop</div></div>
-      <div class="rec-cell"><div class="rec-cell-lbl">Proof point to use</div><div class="rec-cell-val">Regional bank cloud transformation</div></div>
+      <div class="rec-cell"><div class="rec-cell-lbl">Who to approach</div><div class="rec-cell-val">Head of Security Operations</div></div>
+      <div class="rec-cell"><div class="rec-cell-lbl">Recommended move</div><div class="rec-cell-val">Threat briefing on sector incidents</div></div>
+      <div class="rec-cell"><div class="rec-cell-lbl">Proof point to use</div><div class="rec-cell-val">MDR rollout, comparable insurer</div></div>
     </div>
   </div>
   <p class="body-text reveal">The account manager doesn't have to trust it blindly — every line of evidence is traceable back to the source it came from. They can act on it, park it, or dismiss it, and the system learns from which ones actually converted.</p>
@@ -509,11 +513,11 @@ footer { padding:4rem 3rem 3rem; border-top:1px solid var(--border); display:fle
   </div>
 </div>
 </div>
-<!-- CASE 03 — Commercial Intelligence Agent -->
+<!-- CASE 03 — Leadership Briefing Agent -->
 <div class="full-divider"></div>
 <div class="stage-wrap two" id="case-03">
 <div class="stage">
-  <div class="case-stage-tag">Case Study 03 · Commercial Intelligence Agent — Commercial Strategy</div>
+  <div class="case-stage-tag">Case Study 03 · Leadership Briefing Agent — Executive Reporting</div>
   <h2 class="case-name">AI connected the signals, so leadership saw the demand months before <span class="case-name-num">the numbers did</span>.</h2>
   <p class="case-tagline">A weekly AI briefing that connected delivery, finance and client conversations into one executive view — helping drive a 131% increase in service margins.</p>
   <div class="stat-strip reveal">
