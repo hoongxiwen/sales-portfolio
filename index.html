@@ -207,9 +207,8 @@ nav { position:fixed; top:0; left:0; right:0; z-index:100; padding:1.1rem 3rem; 
 /* STATUS BADGE */
 
 /* OVERVIEW / CAPABILITY SECTION */
-.cap-title { font-family:'Sora',sans-serif; font-weight:600; font-size:1.15rem; letter-spacing:-0.01em; color:var(--ink2); max-width:900px; margin-bottom:1.8rem; }
-.cap-sub { font-size:0.95rem; color:var(--ink2); max-width:640px; line-height:1.75; margin-bottom:2.6rem; }
-.cap-grid { display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-bottom:2.6rem; }
+.label-hint { font-family:'Space Mono',monospace; font-weight:400; font-size:0.62rem; letter-spacing:0.06em; text-transform:uppercase; color:var(--ink3); }
+.cap-grid { display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-top:1.3rem; margin-bottom:2.6rem; }
 .cap-card { background:var(--bg4); border:1px solid var(--border2); border-radius:14px; padding:1.4rem 1.5rem; }
 .cap-card-top { display:flex; justify-content:space-between; align-items:center; gap:1rem; margin-bottom:0.5rem; }
 .cap-name { font-family:'Sora',sans-serif; font-weight:600; font-size:1rem; color:var(--ink); letter-spacing:-0.01em; }
@@ -317,7 +316,7 @@ footer { padding:4rem 3rem 3rem; border-top:1px solid var(--border); display:fle
 <div class="stage-wrap" id="overview">
 <div class="stage">
   <div class="section-label reveal">The Overview</div>
-  <h2 class="cap-title reveal">Explore four case studies here:</h2>
+  <div class="label-hint reveal">Click any card to explore</div>
 
   <div class="cap-grid reveal">
     <a href="#case-01" class="cap-card-link four">
@@ -610,7 +609,7 @@ footer { padding:4rem 3rem 3rem; border-top:1px solid var(--border); display:fle
   <p class="body-text reveal">Three lines. None of them existed in any report. All three became decisions.</p>
 
   <div class="section-label reveal">Business impact</div>
-  <p class="body-text reveal">Power BI showed standard pentesting margins stuck at <strong>16% against a 45% target</strong> — the clearest sign something in pricing or staffing was broken. Combined with the demand signal from Slack, that led me to run a service-line profitability analysis, lifting margins to <strong>37%</strong> and supporting a <strong>30% client rate increase</strong>. A second signal exposed a pipeline gap — new business covered only 20% of forecast, masked by inbound and renewal revenue — so sales was restructured to require active hunting, with commission overhauled to match.</p>
+  <p class="body-text reveal">Power BI showed standard pentesting margins stuck at <strong>16% against a 45% target</strong> — the clearest sign something in pricing or staffing was broken. Combined with the demand signal from Slack, that led me to run a service-line profitability analysis, lifting margins to <strong>37%</strong> and supporting a <strong>30% client rate increase</strong>.</p>
   <div class="impact-row reveal">
     <div class="impact-cell"><div class="impact-num">16%→37%</div><div class="impact-desc">AI PENTESTING MARGIN — A 131% INCREASE</div></div>
     <div class="impact-cell"><div class="impact-num">+30%</div><div class="impact-desc">INCREASE IN CLIENT RATES</div></div>
